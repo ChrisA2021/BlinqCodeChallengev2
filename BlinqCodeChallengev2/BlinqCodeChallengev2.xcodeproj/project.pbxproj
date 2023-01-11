@@ -16,6 +16,13 @@
 		2A6E148E296BD9BD00F868A8 /* BlinqCodeChallengev2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E148D296BD9BD00F868A8 /* BlinqCodeChallengev2Tests.swift */; };
 		2A6E1498296BD9BD00F868A8 /* BlinqCodeChallengev2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E1497296BD9BD00F868A8 /* BlinqCodeChallengev2UITests.swift */; };
 		2A6E149A296BD9BD00F868A8 /* BlinqCodeChallengev2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E1499296BD9BD00F868A8 /* BlinqCodeChallengev2UITestsLaunchTests.swift */; };
+		2A6E14A9296DA8AE00F868A8 /* PresentationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E14A8296DA8AE00F868A8 /* PresentationHelper.swift */; };
+		2A6E14AB296E2CB900F868A8 /* RequestFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E14AA296E2CB900F868A8 /* RequestFormViewController.swift */; };
+		2A6E14AD296E2CEC00F868A8 /* PreRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E14AC296E2CEC00F868A8 /* PreRequestViewController.swift */; };
+		2A6E14AF296E471600F868A8 /* APIRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E14AE296E471600F868A8 /* APIRequester.swift */; };
+		2A6E14B1296E499400F868A8 /* CongratulationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E14B0296E499400F868A8 /* CongratulationsViewController.swift */; };
+		2A6E14B5296E4BBA00F868A8 /* Confetti.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2A6E14B4296E4BBA00F868A8 /* Confetti.gif */; };
+		2A6E14B7296E4C2B00F868A8 /* GIFLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E14B6296E4C2B00F868A8 /* GIFLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		2A6E1493296BD9BD00F868A8 /* BlinqCodeChallengev2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlinqCodeChallengev2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A6E1497296BD9BD00F868A8 /* BlinqCodeChallengev2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinqCodeChallengev2UITests.swift; sourceTree = "<group>"; };
 		2A6E1499296BD9BD00F868A8 /* BlinqCodeChallengev2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinqCodeChallengev2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2A6E14A8296DA8AE00F868A8 /* PresentationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationHelper.swift; sourceTree = "<group>"; };
+		2A6E14AA296E2CB900F868A8 /* RequestFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFormViewController.swift; sourceTree = "<group>"; };
+		2A6E14AC296E2CEC00F868A8 /* PreRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreRequestViewController.swift; sourceTree = "<group>"; };
+		2A6E14AE296E471600F868A8 /* APIRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequester.swift; sourceTree = "<group>"; };
+		2A6E14B0296E499400F868A8 /* CongratulationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsViewController.swift; sourceTree = "<group>"; };
+		2A6E14B4296E4BBA00F868A8 /* Confetti.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Confetti.gif; sourceTree = "<group>"; };
+		2A6E14B6296E4C2B00F868A8 /* GIFLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +113,13 @@
 		2A6E1475296BD9BC00F868A8 /* BlinqCodeChallengev2 */ = {
 			isa = PBXGroup;
 			children = (
+				2A6E14B4296E4BBA00F868A8 /* Confetti.gif */,
+				2A6E14AE296E471600F868A8 /* APIRequester.swift */,
+				2A6E14B6296E4C2B00F868A8 /* GIFLoader.swift */,
+				2A6E14AC296E2CEC00F868A8 /* PreRequestViewController.swift */,
+				2A6E14AA296E2CB900F868A8 /* RequestFormViewController.swift */,
+				2A6E14B0296E499400F868A8 /* CongratulationsViewController.swift */,
+				2A6E14A8296DA8AE00F868A8 /* PresentationHelper.swift */,
 				2A6E1476296BD9BC00F868A8 /* AppDelegate.swift */,
 				2A6E1478296BD9BC00F868A8 /* SceneDelegate.swift */,
 				2A6E147A296BD9BC00F868A8 /* ViewController.swift */,
@@ -231,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A6E14B5296E4BBA00F868A8 /* Confetti.gif in Resources */,
 				2A6E1483296BD9BD00F868A8 /* LaunchScreen.storyboard in Resources */,
 				2A6E1480296BD9BD00F868A8 /* Assets.xcassets in Resources */,
 				2A6E147E296BD9BC00F868A8 /* Main.storyboard in Resources */,
@@ -258,9 +280,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A6E14AF296E471600F868A8 /* APIRequester.swift in Sources */,
+				2A6E14AD296E2CEC00F868A8 /* PreRequestViewController.swift in Sources */,
+				2A6E14B1296E499400F868A8 /* CongratulationsViewController.swift in Sources */,
+				2A6E14B7296E4C2B00F868A8 /* GIFLoader.swift in Sources */,
 				2A6E147B296BD9BC00F868A8 /* ViewController.swift in Sources */,
 				2A6E1477296BD9BC00F868A8 /* AppDelegate.swift in Sources */,
 				2A6E1479296BD9BC00F868A8 /* SceneDelegate.swift in Sources */,
+				2A6E14AB296E2CB900F868A8 /* RequestFormViewController.swift in Sources */,
+				2A6E14A9296DA8AE00F868A8 /* PresentationHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
