@@ -9,19 +9,28 @@ import UIKit
 
 class CongratulationsViewController: UIViewController {
     
+    @IBOutlet weak var congratulationsMessage: UILabel!
     @IBOutlet weak var ConfettiView: UIImageView!
     
-
+    @IBOutlet weak var congratulationsBroccoli: UIImageView!
+    
+    var userName = ""
+    var userEmail = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let confettiGIF = UIImage.gifImageWithName("Confetti")
         ConfettiView.image = confettiGIF
+        
 
-        // Do any additional setup after loading the view.
+        congratulationsMessage.text = "Congratulations \(userName)!\n Your invite has been sent to \n \(userEmail)"
     }
     
-
+    @IBAction func dismissAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

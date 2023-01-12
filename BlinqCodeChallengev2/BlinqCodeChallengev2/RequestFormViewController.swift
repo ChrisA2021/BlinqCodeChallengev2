@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol RequestFormDelegate {
+    func isUserRegistered(registered: Bool)
+}
+
 class RequestFormViewController: UIViewController {
     
     @IBOutlet weak var userName: UITextField!
@@ -26,14 +30,13 @@ class RequestFormViewController: UIViewController {
     
     @IBOutlet weak var requestMessage: UILabel!
     
-    
+    var delegate: RequestFormDelegate?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         resetForm()
-
-        // Do any additional setup after loading the view.
+        
     }
     
     func resetForm() {
@@ -100,21 +103,23 @@ class RequestFormViewController: UIViewController {
         requestMessage.text = saveToServer(userName: userName.text ?? "", userEmail: userEmail.text ?? "")
         
         if (requestMessage.text == "Registered") {
-            self.performSegue(withIdentifier: "CongratulationsViewController", sender: nil)
+            performSegue(withIdentifier: "showCongratulationViewController", sender: self)
         }
-//        resetForm()
     }
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let destination = segue.destination as? CongratulationsViewController {
+            destination.userName = userName.text ?? ""
+            destination.userEmail = userEmail.text ?? ""
+        }
     }
-    */
+    
+    @IBAction func dismissAction(_ sender: Any) {
+        if (requestMessage.text == "Registered") {
+            delegate?.isUserRegistered(registered: true)
+        }
 
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }

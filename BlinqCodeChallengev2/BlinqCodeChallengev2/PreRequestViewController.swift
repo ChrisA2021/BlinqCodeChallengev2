@@ -7,23 +7,24 @@
 
 import UIKit
 
-class PreRequestViewController: UIViewController {
+class PreRequestViewController: UIViewController, RequestFormDelegate {
+    
+    var userRegistered = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func isUserRegistered(registered: Bool) {
+        userRegistered = registered
+        if (userRegistered) {
+            performSegue(withIdentifier: "showCongratulationViewController", sender: self)
+        }
     }
-    */
-
+    
+    @IBAction func openFormAction(_ sender: Any) {
+        let destinationVC = RequestFormViewController()
+        destinationVC.delegate = self
+    }
 }
+
