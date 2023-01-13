@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A56D4FE297045510072ECC2 /* PreCancelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A56D4FD297045510072ECC2 /* PreCancelViewController.swift */; };
+		2A56D5002970D5710072ECC2 /* SuccessfulCancelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A56D4FF2970D5710072ECC2 /* SuccessfulCancelViewController.swift */; };
+		2A56D5022970DD840072ECC2 /* Rain.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2A56D5012970DD840072ECC2 /* Rain.gif */; };
 		2A6E1477296BD9BC00F868A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E1476296BD9BC00F868A8 /* AppDelegate.swift */; };
 		2A6E1479296BD9BC00F868A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E1478296BD9BC00F868A8 /* SceneDelegate.swift */; };
 		2A6E147B296BD9BC00F868A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6E147A296BD9BC00F868A8 /* ViewController.swift */; };
@@ -43,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A56D4FD297045510072ECC2 /* PreCancelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreCancelViewController.swift; sourceTree = "<group>"; };
+		2A56D4FF2970D5710072ECC2 /* SuccessfulCancelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulCancelViewController.swift; sourceTree = "<group>"; };
+		2A56D5012970DD840072ECC2 /* Rain.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Rain.gif; sourceTree = "<group>"; };
 		2A6E1473296BD9BC00F868A8 /* BlinqCodeChallengev2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlinqCodeChallengev2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A6E1476296BD9BC00F868A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A6E1478296BD9BC00F868A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,12 +119,15 @@
 		2A6E1475296BD9BC00F868A8 /* BlinqCodeChallengev2 */ = {
 			isa = PBXGroup;
 			children = (
+				2A56D5012970DD840072ECC2 /* Rain.gif */,
 				2A6E14B4296E4BBA00F868A8 /* Confetti.gif */,
 				2A6E14AE296E471600F868A8 /* APIRequester.swift */,
 				2A6E14B6296E4C2B00F868A8 /* GIFLoader.swift */,
 				2A6E14AC296E2CEC00F868A8 /* PreRequestViewController.swift */,
 				2A6E14AA296E2CB900F868A8 /* RequestFormViewController.swift */,
 				2A6E14B0296E499400F868A8 /* CongratulationsViewController.swift */,
+				2A56D4FD297045510072ECC2 /* PreCancelViewController.swift */,
+				2A56D4FF2970D5710072ECC2 /* SuccessfulCancelViewController.swift */,
 				2A6E14A8296DA8AE00F868A8 /* PresentationHelper.swift */,
 				2A6E1476296BD9BC00F868A8 /* AppDelegate.swift */,
 				2A6E1478296BD9BC00F868A8 /* SceneDelegate.swift */,
@@ -255,6 +264,7 @@
 				2A6E14B5296E4BBA00F868A8 /* Confetti.gif in Resources */,
 				2A6E1483296BD9BD00F868A8 /* LaunchScreen.storyboard in Resources */,
 				2A6E1480296BD9BD00F868A8 /* Assets.xcassets in Resources */,
+				2A56D5022970DD840072ECC2 /* Rain.gif in Resources */,
 				2A6E147E296BD9BC00F868A8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,7 +296,9 @@
 				2A6E14B7296E4C2B00F868A8 /* GIFLoader.swift in Sources */,
 				2A6E147B296BD9BC00F868A8 /* ViewController.swift in Sources */,
 				2A6E1477296BD9BC00F868A8 /* AppDelegate.swift in Sources */,
+				2A56D4FE297045510072ECC2 /* PreCancelViewController.swift in Sources */,
 				2A6E1479296BD9BC00F868A8 /* SceneDelegate.swift in Sources */,
+				2A56D5002970D5710072ECC2 /* SuccessfulCancelViewController.swift in Sources */,
 				2A6E14AB296E2CB900F868A8 /* RequestFormViewController.swift in Sources */,
 				2A6E14A9296DA8AE00F868A8 /* PresentationHelper.swift in Sources */,
 			);

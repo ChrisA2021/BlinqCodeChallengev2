@@ -118,7 +118,6 @@ class RequestFormViewController: UIViewController {
         if (requestMessage.text == "Registered") {
             delegate?.isUserRegistered(registered: true)
         }
-
         self.dismiss(animated: true, completion: nil)
     }
     

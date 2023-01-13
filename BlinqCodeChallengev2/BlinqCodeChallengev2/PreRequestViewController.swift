@@ -18,13 +18,22 @@ class PreRequestViewController: UIViewController, RequestFormDelegate {
     func isUserRegistered(registered: Bool) {
         userRegistered = registered
         if (userRegistered) {
-            performSegue(withIdentifier: "showCongratulationViewController", sender: self)
+            performSegue(withIdentifier: "showPreCancelViewController", sender: self)
         }
     }
+    
     
     @IBAction func openFormAction(_ sender: Any) {
         let destinationVC = RequestFormViewController()
         destinationVC.delegate = self
+        
+        performSegue(withIdentifier: "showRequestFormViewController", sender: nil)
     }
+    
+    @IBAction func openPreCancelView(_ sender: Any) {
+        performSegue(withIdentifier: "showPreCancelViewController", sender: self)
+    }
+    
+    
 }
 

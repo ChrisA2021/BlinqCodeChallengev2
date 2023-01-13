@@ -42,8 +42,20 @@
                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="openFormAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="44J-Oe-apm"/>
-                                    <segue destination="FZh-9K-8u3" kind="presentation" id="HgB-mV-FGb"/>
+                                    <action selector="openFormAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mMA-bU-V9p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q64-im-Pw0">
+                                <rect key="frame" x="122" y="530" width="149" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Cancel my Invite">
+                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="openPreCancelView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RpM-C5-yCs"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -63,10 +75,118 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bSg-sO-Mub"/>
+                    <connections>
+                        <segue destination="FZh-9K-8u3" kind="presentation" identifier="showRequestFormViewController" id="0yd-Wr-dUA"/>
+                        <segue destination="BzF-Hp-1So" kind="show" identifier="showPreCancelViewController" id="iih-z8-Zcz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="983.96946564885491" y="-2.1126760563380285"/>
+        </scene>
+        <!--Pre Cancel View Controller-->
+        <scene sceneID="4Jg-DG-sZ1">
+            <objects>
+                <viewController id="BzF-Hp-1So" customClass="PreCancelViewController" customModule="BlinqCodeChallengev2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Cc-lR-k1h">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Hrn-VQ-gE2">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you would like to cancel your invite please click below" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHS-xX-fto">
+                                <rect key="frame" x="71" y="403" width="251" height="47"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDs-Qv-yJa">
+                                <rect key="frame" x="122" y="482" width="149" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Cancel my Invite">
+                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="openFormAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q03-Hz-nMH"/>
+                                    <action selector="openPreCancelView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LpV-PM-f9X"/>
+                                    <action selector="openSuccessfulCancelViewController:" destination="BzF-Hp-1So" eventType="touchUpInside" id="5g0-aU-qt4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Broccoli &amp; Co." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ee-lk-I3R">
+                                <rect key="frame" x="112" y="335" width="169" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vIG-bn-3wf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DHS-xX-fto" firstAttribute="top" secondItem="vIG-bn-3wf" secondAttribute="top" constant="300" id="4bZ-vw-lr7"/>
+                            <constraint firstItem="2ee-lk-I3R" firstAttribute="leading" secondItem="vIG-bn-3wf" secondAttribute="leading" constant="112" id="5hr-wH-5Mh"/>
+                            <constraint firstItem="vIG-bn-3wf" firstAttribute="trailing" secondItem="DHS-xX-fto" secondAttribute="trailing" constant="71" id="B4e-11-ppy"/>
+                            <constraint firstItem="vIG-bn-3wf" firstAttribute="trailing" secondItem="2ee-lk-I3R" secondAttribute="trailing" constant="112" id="Knz-dG-PPg"/>
+                            <constraint firstItem="DHS-xX-fto" firstAttribute="top" secondItem="2ee-lk-I3R" secondAttribute="bottom" constant="34" id="XIh-8l-KCN"/>
+                            <constraint firstItem="vIG-bn-3wf" firstAttribute="bottom" secondItem="DHS-xX-fto" secondAttribute="bottom" constant="368" id="jwj-ET-sX4"/>
+                            <constraint firstItem="DHS-xX-fto" firstAttribute="leading" secondItem="vIG-bn-3wf" secondAttribute="leading" constant="71" id="wu6-IG-sug"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lCH-nw-wb7"/>
+                    <connections>
+                        <segue destination="nNn-c4-Rfs" kind="show" identifier="showSuccessfulCancelViewController" id="ksp-yj-Q8G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qDW-of-nXg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="983.96946564885491" y="718.30985915492965"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EEH-iv-tEX">
+            <objects>
+                <viewController id="nNn-c4-Rfs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ika-kv-Z48">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eJ6-TW-e0C">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratlations!  Your invite has been sent " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDh-jw-sKi">
+                                <rect key="frame" x="26" y="393" width="340" height="40.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Sad Broccoli" translatesAutoresizingMaskIntoConstraints="NO" id="Rgr-k1-5nj">
+                                <rect key="frame" x="66" y="570.66666666666663" width="261" height="247.33333333333337"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="f1H-QL-xCE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Rgr-k1-5nj" firstAttribute="bottom" secondItem="f1H-QL-xCE" secondAttribute="bottom" id="G3p-eL-biv"/>
+                            <constraint firstItem="f1H-QL-xCE" firstAttribute="trailing" secondItem="tDh-jw-sKi" secondAttribute="trailing" constant="27" id="Jfk-bo-o1u"/>
+                            <constraint firstItem="Rgr-k1-5nj" firstAttribute="leading" secondItem="f1H-QL-xCE" secondAttribute="leading" constant="66" id="LQ8-hA-Xgb"/>
+                            <constraint firstItem="Rgr-k1-5nj" firstAttribute="top" secondItem="tDh-jw-sKi" secondAttribute="bottom" constant="137" id="XM1-JU-Zcv"/>
+                            <constraint firstItem="f1H-QL-xCE" firstAttribute="trailing" secondItem="Rgr-k1-5nj" secondAttribute="trailing" constant="66" id="jgF-aa-N0b"/>
+                            <constraint firstItem="Rgr-k1-5nj" firstAttribute="top" secondItem="tDh-jw-sKi" secondAttribute="bottom" constant="137" id="mvU-ZP-GAp"/>
+                            <constraint firstItem="tDh-jw-sKi" firstAttribute="leading" secondItem="f1H-QL-xCE" secondAttribute="leading" constant="26" id="nTT-P5-blw"/>
+                            <constraint firstItem="tDh-jw-sKi" firstAttribute="top" secondItem="f1H-QL-xCE" secondAttribute="top" constant="290" id="oU5-Pr-E9Q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HJu-im-RIg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AL3-pa-EBL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1800.7633587786258" y="716.90140845070425"/>
         </scene>
         <!--Request Form View Controller-->
         <scene sceneID="Yxa-NB-u9M">
@@ -221,13 +341,11 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kHV-2D-gRP">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HappyBroccoli" translatesAutoresizingMaskIntoConstraints="NO" id="SA3-hD-XS9">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HappyBroccoli" translatesAutoresizingMaskIntoConstraints="NO" id="SA3-hD-XS9">
                                 <rect key="frame" x="66" y="481" width="261" height="268"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Congratlations!  Your invite has been sent " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8F-KK-EcS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratlations!  Your invite has been sent " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8F-KK-EcS">
                                 <rect key="frame" x="26" y="280" width="340" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -247,8 +365,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="kHV-2D-gRP" firstAttribute="top" secondItem="pLH-vY-lAZ" secondAttribute="top" id="GXq-Ea-QJc"/>
+                            <constraint firstItem="jn9-h1-P3T" firstAttribute="trailing" secondItem="q8F-KK-EcS" secondAttribute="trailing" constant="27" id="K2n-6c-GA1"/>
                             <constraint firstItem="kHV-2D-gRP" firstAttribute="trailing" secondItem="jn9-h1-P3T" secondAttribute="trailing" id="YtX-Iz-HeP"/>
                             <constraint firstItem="kHV-2D-gRP" firstAttribute="leading" secondItem="jn9-h1-P3T" secondAttribute="leading" id="bGp-1I-wPW"/>
+                            <constraint firstItem="q8F-KK-EcS" firstAttribute="leading" secondItem="jn9-h1-P3T" secondAttribute="leading" constant="26" id="bKH-Ty-W5o"/>
+                            <constraint firstItem="q8F-KK-EcS" firstAttribute="top" secondItem="jn9-h1-P3T" secondAttribute="top" constant="221" id="fI1-mm-rmM"/>
+                            <constraint firstItem="SA3-hD-XS9" firstAttribute="top" secondItem="q8F-KK-EcS" secondAttribute="bottom" constant="137" id="j95-Zj-fji"/>
                             <constraint firstItem="kHV-2D-gRP" firstAttribute="centerX" secondItem="pLH-vY-lAZ" secondAttribute="centerX" id="m8e-tU-E6O"/>
                             <constraint firstItem="kHV-2D-gRP" firstAttribute="bottom" secondItem="jn9-h1-P3T" secondAttribute="bottom" id="nub-Pf-dBx"/>
                             <constraint firstItem="kHV-2D-gRP" firstAttribute="centerY" secondItem="pLH-vY-lAZ" secondAttribute="centerY" id="zfO-Me-6qn"/>
@@ -270,6 +392,7 @@
     <resources>
         <image name="Background" width="3300" height="6000"/>
         <image name="HappyBroccoli" width="1024" height="1004"/>
+        <image name="Sad Broccoli" width="1080" height="1023"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
