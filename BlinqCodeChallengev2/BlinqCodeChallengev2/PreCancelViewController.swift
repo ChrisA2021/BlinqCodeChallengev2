@@ -22,15 +22,14 @@ class PreCancelViewController: UIViewController {
         alert.addAction(UIAlertAction(title: NSLocalizedString("Yes", comment: "Cancel Invite"), style: .default, handler: { _ in
             NSLog("The \"cancel invite\" alert occured.")
             self.cancelInvite = true
-            print(self.cancelInvite)
+            if (self.cancelInvite) {
+                self.performSegue(withIdentifier: "showSuccessfulCancelViewController", sender: self)
+            }
             }))
         alert.addAction(UIAlertAction(title: NSLocalizedString("No, I changed my mind", comment: "Do not cancel invite"), style: .default, handler: { _ in
         NSLog("The \"cancel invite\" alert occured.")
         }))
         self.present(alert, animated: true, completion: nil)
-        if (self.cancelInvite) {
-            performSegue(withIdentifier: "showSuccessfulCancelViewController", sender: self)
-        }
     }
     
     /*

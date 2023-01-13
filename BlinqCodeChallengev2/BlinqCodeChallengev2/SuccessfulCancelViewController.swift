@@ -9,11 +9,12 @@ import UIKit
 
 class SuccessfulCancelViewController: UIViewController {
 
+    @IBOutlet weak var RainView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let rainGIF = UIImage.gifImageWithName("Rain")
-//        ConfettiView.image = confettiGIF
+        RainView.image = rainGIF
 
         // Do any additional setup after loading the view.
     }

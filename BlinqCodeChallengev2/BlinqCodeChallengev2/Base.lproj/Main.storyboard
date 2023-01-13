@@ -147,10 +147,10 @@
             </objects>
             <point key="canvasLocation" x="983.96946564885491" y="718.30985915492965"/>
         </scene>
-        <!--View Controller-->
+        <!--Successful Cancel View Controller-->
         <scene sceneID="EEH-iv-tEX">
             <objects>
-                <viewController id="nNn-c4-Rfs" sceneMemberID="viewController">
+                <viewController id="nNn-c4-Rfs" customClass="SuccessfulCancelViewController" customModule="BlinqCodeChallengev2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ika-kv-Z48">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,7 +159,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratlations!  Your invite has been sent " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDh-jw-sKi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your invite has been cancelled  Sorry to see you go 😭" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDh-jw-sKi">
                                 <rect key="frame" x="26" y="393" width="340" height="40.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -183,6 +183,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HJu-im-RIg"/>
+                    <connections>
+                        <outlet property="RainView" destination="eJ6-TW-e0C" id="Ora-g0-jsa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AL3-pa-EBL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -338,14 +341,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kHV-2D-gRP">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kHV-2D-gRP">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HappyBroccoli" translatesAutoresizingMaskIntoConstraints="NO" id="SA3-hD-XS9">
-                                <rect key="frame" x="66" y="481" width="261" height="268"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratlations!  Your invite has been sent " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8F-KK-EcS">
-                                <rect key="frame" x="26" y="280" width="340" height="64"/>
+                                <rect key="frame" x="26" y="371" width="340" height="40.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -360,20 +360,22 @@
                                     <action selector="dismissAction:" destination="5g9-nT-DTE" eventType="touchUpInside" id="dw3-4h-h5y"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HappyBroccoli" translatesAutoresizingMaskIntoConstraints="NO" id="SA3-hD-XS9">
+                                <rect key="frame" x="66" y="482" width="261" height="277"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jn9-h1-P3T"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="kHV-2D-gRP" firstAttribute="top" secondItem="pLH-vY-lAZ" secondAttribute="top" id="GXq-Ea-QJc"/>
-                            <constraint firstItem="jn9-h1-P3T" firstAttribute="trailing" secondItem="q8F-KK-EcS" secondAttribute="trailing" constant="27" id="K2n-6c-GA1"/>
-                            <constraint firstItem="kHV-2D-gRP" firstAttribute="trailing" secondItem="jn9-h1-P3T" secondAttribute="trailing" id="YtX-Iz-HeP"/>
-                            <constraint firstItem="kHV-2D-gRP" firstAttribute="leading" secondItem="jn9-h1-P3T" secondAttribute="leading" id="bGp-1I-wPW"/>
-                            <constraint firstItem="q8F-KK-EcS" firstAttribute="leading" secondItem="jn9-h1-P3T" secondAttribute="leading" constant="26" id="bKH-Ty-W5o"/>
-                            <constraint firstItem="q8F-KK-EcS" firstAttribute="top" secondItem="jn9-h1-P3T" secondAttribute="top" constant="221" id="fI1-mm-rmM"/>
-                            <constraint firstItem="SA3-hD-XS9" firstAttribute="top" secondItem="q8F-KK-EcS" secondAttribute="bottom" constant="137" id="j95-Zj-fji"/>
-                            <constraint firstItem="kHV-2D-gRP" firstAttribute="centerX" secondItem="pLH-vY-lAZ" secondAttribute="centerX" id="m8e-tU-E6O"/>
-                            <constraint firstItem="kHV-2D-gRP" firstAttribute="bottom" secondItem="jn9-h1-P3T" secondAttribute="bottom" id="nub-Pf-dBx"/>
-                            <constraint firstItem="kHV-2D-gRP" firstAttribute="centerY" secondItem="pLH-vY-lAZ" secondAttribute="centerY" id="zfO-Me-6qn"/>
+                            <constraint firstItem="jn9-h1-P3T" firstAttribute="bottom" secondItem="SA3-hD-XS9" secondAttribute="bottom" constant="24" id="1vR-7T-xj8"/>
+                            <constraint firstItem="kHV-2D-gRP" firstAttribute="centerX" secondItem="pLH-vY-lAZ" secondAttribute="centerX" id="98T-ak-osS"/>
+                            <constraint firstItem="jn9-h1-P3T" firstAttribute="trailing" secondItem="SA3-hD-XS9" secondAttribute="trailing" constant="66" id="WGA-VF-tlc"/>
+                            <constraint firstItem="jn9-h1-P3T" firstAttribute="trailing" secondItem="q8F-KK-EcS" secondAttribute="trailing" constant="27" id="a0F-fp-KS6"/>
+                            <constraint firstItem="SA3-hD-XS9" firstAttribute="top" secondItem="jn9-h1-P3T" secondAttribute="top" constant="423" id="emU-Ge-qmN"/>
+                            <constraint firstItem="SA3-hD-XS9" firstAttribute="top" secondItem="q8F-KK-EcS" secondAttribute="bottom" constant="70.329999999999998" id="oxg-XD-Oob"/>
+                            <constraint firstItem="q8F-KK-EcS" firstAttribute="leading" secondItem="jn9-h1-P3T" secondAttribute="leading" constant="26" id="q3U-cU-s8p"/>
+                            <constraint firstItem="SA3-hD-XS9" firstAttribute="leading" secondItem="jn9-h1-P3T" secondAttribute="leading" constant="66" id="vK1-jR-cZf"/>
+                            <constraint firstItem="kHV-2D-gRP" firstAttribute="centerY" secondItem="pLH-vY-lAZ" secondAttribute="centerY" id="vkj-2a-Bk5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OOo-fw-krj"/>
