@@ -8,7 +8,7 @@
 import UIKit
 
 protocol RequestFormDelegate {
-    func isUserRegistered(registered: Bool)
+    func isUserRegistered()
 }
 
 class RequestFormViewController: UIViewController {
@@ -112,13 +112,22 @@ class RequestFormViewController: UIViewController {
             destination.userName = userName.text ?? ""
             destination.userEmail = userEmail.text ?? ""
         }
+        //Code not being used
+//        if let destination = segue.destination as? PreRequestViewController {
+//            destination.userRegistered = true
+//        }
     }
     
     @IBAction func dismissAction(_ sender: Any) {
         if (requestMessage.text == "Registered") {
-            delegate?.isUserRegistered(registered: true)
+            delegate?.isUserRegistered()
         }
         self.dismiss(animated: true, completion: nil)
     }
+    
+    //Did not work
+//    @IBAction func unwindToPreRequest(_ unwindSegue: UIStoryboardSegue) {
+//        // Use data from the view controller which initiated the unwind segue
+//    }
     
 }

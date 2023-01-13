@@ -76,6 +76,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="bSg-sO-Mub"/>
                     <connections>
+                        <outlet property="userPrompt" destination="fXf-O6-mVy" id="XHu-7i-nBP"/>
                         <segue destination="FZh-9K-8u3" kind="presentation" identifier="showRequestFormViewController" id="0yd-Wr-dUA"/>
                         <segue destination="BzF-Hp-1So" kind="show" identifier="showPreCancelViewController" id="iih-z8-Zcz"/>
                     </connections>
@@ -279,7 +280,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Dismiss"/>
                                 <connections>
-                                    <action selector="dismissAction:" destination="FZh-9K-8u3" eventType="touchUpInside" id="LsJ-Ua-lEq"/>
+                                    <action selector="dismissAction:" destination="FZh-9K-8u3" eventType="touchUpInside" id="lDW-4h-3NE"/>
                                 </connections>
                             </button>
                         </subviews>
